@@ -2,6 +2,7 @@ import warnings
 
 from flask import send_file, Blueprint, redirect, render_template_string
 from requests.exceptions import HTTPError
+from werkzeug import Response
 
 from discourse_docsify.cache import MemoryCache, RedisCache
 from discourse_docsify.discourse_api import DiscourseAPI
@@ -91,7 +92,7 @@ class Docs:
         def serve_docs(path):
             if pre_content:
                 pre_result = pre_content(path)
-                if pre_result is not True:
+                if isinstance(pre_result, Response):
                     return pre_result
             if path.endswith(".md"):
                 return self.render_content(path[:-3])

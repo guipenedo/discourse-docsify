@@ -105,8 +105,6 @@ def docs_auth_validation(path):
         return redirect('/login')
     if not session['profile']['admin']:
         return abort(403, 'Only admins may view this page.')
-    # the function must return true for a successful validation
-    return True
 
 docs = Docs(app, {...}, docs_auth_validation)
 ```
