@@ -90,7 +90,9 @@ class Docs:
         @blueprint.route('/<path:path>')
         def serve_docs(path):
             if pre_content:
-                pre_content(path)
+                pre_result = pre_content(path)
+                if pre_result is not True:
+                    return pre_result
             if path.endswith(".md"):
                 return self.render_content(path[:-3])
             elif path == 'index.html':
