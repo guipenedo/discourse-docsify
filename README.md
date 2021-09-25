@@ -120,7 +120,7 @@ This function has one argument: the current request's path.
 | DOCS_INDEX_PATH |  | There is a default `index.html` file with a simple docsify example, which you can replace by giving the path to your own file here. |
 | DOCS_TEMPLATE_PATH |  | There is a default template to generate the documentation content (which appends edit buttons with a forum link and last updated time) but you can replace it with your own by entering its path here. |
 | DOCS_HUMANIZE_LOCALE |  | [humanize](https://github.com/jmoiron/humanize) is used to generate the "last updated" strings (2 hours ago, a month ago, etc). If you want to change the language used, enter a locale name here. Example: `ru_RU` for russian. |
-| DOCS_CACHE_TIMEOUT | 3600 * 10 | Number of seconds for which to cache each page's content. |
+| DOCS_CACHE_TIMEOUT | 60 * 10 | Number of seconds for which to cache each page's content. |
 | DOCS_CACHE_TYPE | memory | either `memory` (uses a simple python dictionary) or `redis` |
 | DOCS_CACHE_REDIS_CONN | {} | if using redis, the redis connection arguments, [passed to the Redis constructor](https://redis-py.readthedocs.io/en/stable/#redis.Redis). |
 | DOCS_CACHE_REDIS_PREFIX | discourse_docsify_docs_ | Prefix to use for redis caching |

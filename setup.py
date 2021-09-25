@@ -6,7 +6,7 @@ with open('README.md') as readme_file:
 
 setup(
     name="discourse-docsify",
-    version='1.0.1',
+    version='1.0.2',
     url="https://github.com/guipenedo/discourse-docsify",
     license="MIT",
     author="Guilherme Penedo",

@@ -46,7 +46,7 @@ class Docs:
         config.setdefault("DOCS_INDEX_PATH", None)
         config.setdefault("DOCS_TEMPLATE_PATH", None)
         config.setdefault("DOCS_HUMANIZE_LOCALE", None)
-        config.setdefault("DOCS_CACHE_TIMEOUT", 3600 * 10)
+        config.setdefault("DOCS_CACHE_TIMEOUT", 60 * 10)
         config.setdefault("DOCS_CACHE_TYPE", "memory")
         config.setdefault("DOCS_CACHE_REDIS_CONN", {})
         config.setdefault("DOCS_CACHE_REDIS_PREFIX", 'discourse_docsify_docs_')
